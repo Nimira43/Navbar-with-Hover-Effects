@@ -38,7 +38,7 @@ h1 {
     letter-spacing: 2px;
     color: orangered;
     text-shadow: 1px 1px 0 #111,
-                 2px 2px 0 #000,
+                 2px 2px 0 khaki,
                  3px 3px 0 orangered;
     animation: appear 5s linear;
 }
@@ -186,4 +186,23 @@ h1 {
     font-size: 1.8rem;
     font-weight: 400;
     height: 3rem;
+}
+
+.letter {
+    transition: font-family 0.4s;  
+}
+
+.letter:hover {
+    font-family: 'Fredericka the Great', serif;
+    color: gold;
+}
+
+.letter:hover + .letter {
+    font-family: 'Fredericka the Great', serif;
+    color: khaki;
+}
+
+.letter:has(+ .letter:hover) {
+    font-family: 'Fredericka the Great', serif;
+    color: khaki;
 }
