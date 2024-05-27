@@ -9,6 +9,10 @@
     text-decoration: none;
 }
 
+a {
+    color: #111;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -136,4 +140,22 @@ h1 {
     transform: scale(1);
     top: 0;
     right: 0;
+}
+
+.nav-link {
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    transform: translate3d(2rem, 7rem, 0) rotateX(90deg); 
+}
+
+.social-media {
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media-group a {
+    font-size: 1.8rem;
+    font-weight: 300;
 }
