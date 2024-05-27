@@ -7,6 +7,7 @@
     font-family: 'Poppins', sans-serif;
     list-style-type: none;
     text-decoration: none;
+    user-select: none;
 }
 
 a {
@@ -31,7 +32,7 @@ h1 {
     position: absolute;
     font-family: 'Fredericka the Great', serif;
     top: 50%;
-    left: 50%;
+    left: 25%;
     transform: translate(-50%, -50%);
     font-size: 6rem;
     letter-spacing: 2px;
@@ -39,6 +40,21 @@ h1 {
     text-shadow: 1px 1px 0 #111,
                  2px 2px 0 #000,
                  3px 3px 0 orangered;
+    animation: appear 5s linear;
+}
+
+@keyframes appear {
+    0% {
+        left: -100%;
+    }
+    80% {
+        left: 30%;
+        top: 48%;
+    }
+    100% {
+        left: 25%;
+        top: 50%;
+    }
 }
 
 .container {
@@ -60,6 +76,7 @@ h1 {
     width: 10rem;
     height: 4rem;
     border: none;
+    outline: none;
     overflow: hidden;
     z-index: 10;
 }
@@ -147,6 +164,16 @@ h1 {
     font-weight: 300;
     text-transform: uppercase;
     transform: translate3d(2rem, 7rem, 0) rotateX(90deg); 
+    opacity: 0;
+    display: block;
+    height: 7rem;
+}
+
+.change .nav-link {
+    transform: translate3d(0, 0, 0) rotateX(0);
+    opacity: 1;
+    transition: opacity 0.5s var(--i),
+                transform 0.5s var(--i);
 }
 
 .social-media {
@@ -157,5 +184,6 @@ h1 {
 
 .social-media-group a {
     font-size: 1.8rem;
-    font-weight: 300;
+    font-weight: 400;
+    height: 3rem;
 }
